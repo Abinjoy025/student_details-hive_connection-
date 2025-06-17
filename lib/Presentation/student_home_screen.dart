@@ -163,7 +163,18 @@ class ScreenStudentHome extends StatelessWidget {
                   itemBuilder: (context, index) {
                     var studentData = newstudentsList[index];
                     return ListTile(
-                      leading: Text('${index + 1}'.toString()),
+                      leading: CircleAvatar(
+                        radius: 25,
+                        backgroundColor: Colors.indigo,
+                        child: Text(
+                          studentData.studentName[0].toUpperCase(),
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
                       title: Text(studentData.studentName),
                       subtitle: Row(
                         children: [
